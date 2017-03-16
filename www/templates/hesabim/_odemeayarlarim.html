@@ -1,0 +1,98 @@
+﻿<style>
+    .item-floating-label span {
+        color: #9C9C9C;
+    }
+</style>
+<ion-view view-title="Ödeme Ayarlarım">
+    <ion-content class="padding" style="background:#E8E8E8">
+        <div ng-init="accordion=1">
+            <a ng-click="accordion = 1" class="button" ng-class="{active:accordion==1}" style="width:49%; margin-right:2px; float:left;">
+                Kredi Kartı
+            </a>
+            <a ng-click="accordion = 2" class="button" ng-class="{active:accordion==2}" style="width:49%; margin-left:2px; float:left;">
+                Banka Hesabı
+            </a>
+            <div style="clear:both;"></div>
+
+            <!-- Kredi kartı içerik-->
+            <div ng-show="accordion==1">
+                <h4 style="color:#808080; margin-left:5px;">Kredi Kartı Bilgileri</h4>
+                <div class="list" style="background:#fff;">
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label">Kartın Üzerindeki İsim</span>
+                        <input type="text" placeholder="İsim">
+                    </label>
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label">Kart Numarası</span>
+                        <input type="number" placeholder="Kart Numarası">
+                    </label>
+                </div>
+                <h4 style="color:#808080; margin-left:5px;">Son Kullanım Tarihi</h4>
+                <div class="row" style="background:#fff; padding:0;">
+                    <div class="col-50">
+                        <label class="item item-input item-floating-label">
+                            <span class="input-label">Ay</span>
+                            <input type="number" min="1" max="12" placeholder="Ay">
+                        </label>
+                    </div>
+                    <div class="col-50">
+                        <label class="item item-input item-floating-label">
+                            <span class="input-label">Yıl</span>
+                            <input type="number" min="2016" max="2024" placeholder="Yıl">
+                        </label>
+                    </div>
+                </div>
+                <h4 style="color:#808080; margin-left:5px;">Güvenlik Kodu</h4>
+                <div class="row" style="padding:0;">
+                    <div class="col-50">
+                        <label class="item item-input">
+                            <input type="number" placeholder="CVV">
+                        </label>
+                    </div>
+                    <div class="col-50" style="padding:3px 5px 3px 10px; font-size:12px;">
+                        CVV kodu kartınızın arkasındaki son 3 rakamdır.
+                    </div>
+                </div>
+                <br />
+                <a class="button button-outline button-block button-assertive">
+                    Kredi Kartı Bilgisini Ekle
+                </a>
+            </div>
+
+
+
+            <!-- Banka hesabı içerik-->
+            <div ng-show="accordion==2">
+                <h4 style="color:#808080; margin-left:5px;">Banka Hesap Bilgileri</h4>
+                <div class="list" style="background:#fff;">
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label">Hesap Sahibi Ad-Soyad</span>
+                        <input type="text" placeholder="Hesap Sahibi Ad-Soyad">
+                    </label>
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label">IBAN</span>
+                        <input type="text" placeholder="IBAN">
+                    </label>
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label">BIC (Swift-Code)</span>
+                        <input type="text" placeholder="BIC (Swift-Code)">
+                    </label>
+                </div>
+                <h4 style="color:#808080; margin-left:5px;">Ülke</h4>
+                <div class="row" style="background:#fff; padding:0;">
+                    <select class="item item-input" style="width: 100%;" ng-model="secilenFaturaAdresi">
+                        <option value="DE">ALMANYA - DE</option>
+                    </select>
+
+                </div>
+                <br />
+                <a class="button button-outline button-block button-assertive">
+                    Banka Hesabını Ekle
+                </a>
+            </div>
+
+        </div>
+
+
+    </ion-content>
+</ion-view>

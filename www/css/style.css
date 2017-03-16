@@ -1,0 +1,136 @@
+/* Empty. Add your own CSS if you like */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700,900);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+* { font-family: 'Roboto', sans-serif; }
+
+body { font-size: 16px;}
+.small { font-size: 12px; /* 75% of the baseline */ }
+.large { font-size: 20px; /* 125% of the baseline */ }
+
+
+
+.slide-in-right {
+  -webkit-transform: translateX(100%);
+    transform: translateX(100%); }
+
+.slide-in-right.ng-enter, .slide-in-right > .ng-enter {
+  -webkit-transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+  transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms; }
+
+.slide-in-right.ng-enter-active, .slide-in-right > .ng-enter-active {
+  -webkit-transform: translateX(0);
+    transform: translateX(0); }
+
+.slide-in-right.ng-leave, .slide-in-right > .ng-leave {
+  -webkit-transition: all ease-in-out 250ms;
+  transition: all ease-in-out 250ms; }
+
+/*Menu*/
+ion-item a {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+ion-item a i {
+    font-size:200%;
+    vertical-align: middle;
+    margin-right:5px;
+}
+ion-item a i img {
+    width:32px;
+    height:auto;
+}
+
+
+/**************************/
+.anakategori-liste {
+  height: auto;
+  overflow: hidden;
+}
+a.anakategori-btn{
+  display:block;
+  width: 31%;
+  height: 75px;
+  float: left;
+  padding: 15px 16px 10px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius:10px;
+  margin:5px 0 5px 5px;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border-style: outset !important;
+  border-width: 1px;
+}
+a.anakategori-btn span{
+    transform: translate(-50%, -50%);
+    text-shadow: 0px 0px 3px #000;
+    font-weight: 800;
+    text-decoration: none;
+    line-height:22px;
+    color: #fff;
+    top: 40%;
+    float: left;
+    left: 50%;
+    position: relative;
+    font-size: 17px;
+}
+
+
+/* Sepetim */
+.sepet-main-button {
+    position:absolute;
+    right:10px;
+    bottom:20px;
+    z-index:100;
+}
+.sepet-main-button button {
+    border-radius:50px;
+    font-size:32px !important;
+    padding:3px 5px;
+    color:#fff;
+}
+.sepet-main-button .button.icon:before {
+    font-size:32px;
+}
+.sepet-main-button div {
+    position:absolute;
+    right:0px;
+    bottom:-5px;
+    border-radius:50px;
+    border:2px solid red;
+    width:25px;
+    text-align:center;
+    background:#fff;
+}
+.input-label {
+    margin-top:-10px;
+}
+
+
+/*Accardion men� - TAB i�in kullan�ld�*/
+h3.accordion{
+    margin: 0;
+}
+.accordion a{
+    padding: 10px;
+    background: #ddd;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1px;
+}
+.accordion-content{
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 1px 0;
+}
+a.active {
+    background:#444444 !important;
+    color:#fff;
+}
+a.active:hover {
+    color:#fff;
+}

@@ -1,0 +1,18 @@
+﻿<ion-view view-title="Lisan">
+    <ion-content style="background:#E8E8E8">
+
+            <ion-list>
+                <ion-radio ng-model="secilenDil" ng-value="'tr'"><img src="img/bayrak-tr.png" style="width:32px; vertical-align:text-bottom; margin-bottom:-3px;" /> TÜRKÇE</ion-radio>
+                <ion-radio ng-model="secilenDil" ng-value="'de'"><img src="img/bayrak-de.png" style="width:32px; vertical-align:text-bottom; margin-bottom:-3px;" /> ALMANCA</ion-radio>
+                <ion-radio ng-model="secilenDil" ng-value="'fr'"><img src="img/bayrak-fr.png" style="width:32px; vertical-align:text-bottom; margin-bottom:-3px;" /> FRANSIZCA</ion-radio>
+                <ion-radio ng-model="secilenDil" ng-value="'en'"><img src="img/bayrak-en.png" style="width:32px; vertical-align:text-bottom; margin-bottom:-3px;" /> İNGİLİZCE</ion-radio>
+                <ion-radio ng-model="secilenDil" ng-value="'es'"><img src="img/bayrak-es.png" style="width:32px; vertical-align:text-bottom; margin-bottom:-3px;" /> İSPANYOLCA</ion-radio>
+            </ion-list>
+
+        <div class="list" style="margin:10px;">
+            <button class="button button-block button-positive" ng-click="kaydet(secilenDil)">
+                Güncelle
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

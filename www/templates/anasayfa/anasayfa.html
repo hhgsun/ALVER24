@@ -1,0 +1,55 @@
+<ion-view view-title="<b>ALVER<span style='color:red;'>24</span></b>.com" enable-menu-with-back-views="false">
+    <!-- NavBar -normalde burası sidemenu nün içinde ama geributonunu kaldırmak için yeniden koydum ve içinden geri butonu kodunu sildim-->
+    <ion-nav-bar class="bar-stable" style="text-align:center;">
+        <ion-nav-buttons side="left">
+            <button class="button button-icon button-clear ion-navicon-round" menu-toggle="left"></button>
+        </ion-nav-buttons>
+
+        <ion-nav-buttons side="right">
+            <button ui-sref="app.hesabim" class="button button">
+                <i class="icon ion-android-person"></i>
+            </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+
+    <ion-content style="background: #E8E8E8;">
+        <div class="text-center" style="margin: 7px 0 -13px 0;">{{LANG.anasayfa.subTitle}} {{aktifKullanici.ad}}</div>
+
+        <div class="list anakategori-liste" style="background:#fff; margin:20px 11px 20px 11px; padding:0px 10px;">
+            <a ng-repeat="kategori in anaKategoriler" href="#/app/kategoriler/{{kategori.key}}?baslik={{kategori.baslik}}" class="anakategori-btn"
+                ng-style="{'background': '' + kategori.renk + '', 'border-color':'' + kategori.renk + ''}">
+                <span>{{kategori.baslik}}</span>
+            </a>
+            <a href="#/app/urunekle" class="anakategori-btn" style="width: 62% !important; background: gray; border-color: gray;">
+                <span>Sende Sat !</span>
+            </a>
+        </div>
+
+        <div style="clear: both"></div>
+
+        <div class="list list-inset" style="margin: 6px 10px;">
+            <a href="#/app/ilanbolumu" class="item item-icon-left" style="height:45px;">
+                <i class="icon"><img src="img/ilanlar-icon.png" width="40" /></i> İlanlar
+            </a>
+        </div>
+
+        <div class="list list-inset" style="margin: 6px 10px;">
+            <a href="#/app/tavsiyeet" class="item item-icon-left" style="height:45px;">
+                <i class="icon ion-android-people"></i> Tavsiye Et (100 Puan Kazan)
+            </a>
+        </div>
+
+        <div class="list list-inset" style="margin: 6px 10px;">
+            <a href="#/app/telsip" class="item item-icon-left" style="height:45px;">
+                <i class="icon"><img src="img/telsip-icon.png" width="40" /></i> Telefon ile Sipariş Hattı -ücretsiz
+            </a>
+        </div>
+
+        <div class="list list-inset" style="margin: 6px 10px;">
+            <a href="#/app/prjdan" class="item item-icon-left" style="height:45px;">
+                <i class="icon"><img src="img/projedanisman-icon.jpg" width="40" /></i> Proje Danışmanları
+            </a>
+        </div>
+
+    </ion-content>
+</ion-view>

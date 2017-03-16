@@ -1,0 +1,56 @@
+<ion-view view-title="{{urunBaslik}}">
+    <ion-content style="background: #E8E8E8;">
+        {{urunBaslik}}
+        <!--
+        <div class="list card">
+            <div class="item item-image">
+                <img ng-if="detay.resimler[0].downloadURL != undefined">
+                <img ng-if="!detay.resimler" src="../img/resimyok.png">            
+            </div>
+            <div class="item">
+                <h2 style="display:inline;"><b>{{detay.urunAdi}}</b></h2>
+                <h2 style="display:inline; float:right;">Fiyat: {{detay.fiyat}} &euro;</h2>
+            </div>
+        </div>
+
+        <div class="list card">
+            <div class="item item-body" style="padding-top:5px;">
+                <h2 style="margin: 5px 0 0 0;">Ürün Kodu: {{detay.key}}</h2>
+            </div>
+        </div>
+
+        <div class="list card">
+            <ion-checkbox style="padding:10px 10px 10px 50px; background:#3BC1F5;">Puan Kullan <span style="float:right;">Puanın: 1200</span></ion-checkbox>
+
+            <label class="item item-input" style="background:#e42112; padding-top:13px;">
+                <span class="input-label" style="color:#fff;">Seçenekler</span>
+                <style>
+                    option:last-child {display:none;}
+                </style>
+                <select style="border:none; border-left-width: 1px; border-left-style: solid; border-left-color: rgb(128, 128, 128); color: rgb(226, 226, 226); font-size: 20px; padding-left: 5px; background: none;">
+                    <option>TEST</option>
+                    <option>TEST 2</option>
+                    <option>TEST 3</option>
+                    <option>TEST 4</option>
+                </select>
+            </label>
+            <label class="item item-input" style="background:#e42112;">
+                <span class="input-label" style="color:#fff;">Sipariş Adeti</span>
+                <input placeholder="1" type="number" min="1" style="border-left:1px solid #808080; color:#fff; font-size:20px; padding-left:5px;">
+            </label>
+            <a style="margin-top:1px;" class="item item-icon-left item-positive">
+                <i class="icon ion-android-cart"></i> Sepete Ekle
+            </a>
+
+            -->
+
+
+            <a ng-click="sepeteEkle()" class="item item-icon-left item-positive">
+                <i class="icon ion-android-cart"></i> Sepete Ekle
+            </a>
+            <a ng-click="sepettenKaldir()" class="item item-icon-left">
+                <i class="icon ion-android-cart"></i> Sepetten Kaldır
+            </a>
+
+    </ion-content>
+</ion-view>

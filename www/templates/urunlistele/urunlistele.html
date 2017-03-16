@@ -1,0 +1,16 @@
+<ion-view view-title="{{secBaslik}} ürünleri">
+    <ion-content>
+
+        <div class="list">
+
+            <a ng-repeat="urun in urunler" class="item item-thumbnail-left" href="#/app/urundetay/{{urun.key}}?baslik={{urun.baslik}}">
+                <img ng-if="urun.resimler[0].downloadURL != undefined">
+                <img ng-if="!urun.resimler" src="img/resimyok.png">
+                <h2>{{urun.baslik}}</h2>
+                <p>{{urun.aciklama}}</p>
+            </a>
+
+        </div>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,32 @@
+﻿<ion-view view-title="Bilgilerim">
+    <ion-content style="background:#E8E8E8">
+        <div class="list list-inset">
+            <div class="row" style="padding:0;">
+                <div class="col" style="padding:0;">
+                    <label class="item item-input item-stacked-label">
+                        <input ng-model="kullanici.adi" ng-true-value="kullanici.adi" type="text" placeholder="Adınız">
+                    </label>
+                </div>
+                <div class="col" style="padding:0;">
+                    <label class="item item-input item-stacked-label">
+                        <input ng-model="kullanici.soyad" type="text" placeholder="Soyadız">
+                    </label>
+                </div>
+            </div>
+            <label class="item item-input item-stacked-label">
+                <input ng-model="kullanici.meslek" type="text" placeholder="Meslek">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <input ng-model="kullanici.mail" type="email" placeholder="Mail">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <input ng-model="kullanici.dogumTarihi" type="date" placeholder="Doğum Tarihi">
+            </label>
+        </div>
+        <div class="list" style="margin:10px;">
+            <button class="button button-block button-positive" ng-click="guncelle()">
+                Güncelle
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

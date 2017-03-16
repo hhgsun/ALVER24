@@ -1,0 +1,20 @@
+﻿<ion-view view-title="Proje Düzenle">
+    <ion-content style="background:#E8E8E8">
+        <div class="list list-inset">
+            <label class="item item-input">
+                <input ng-model="proje.adi" type="text" placeholder="Adı">
+            </label>
+            <label class="item item-input">
+                <input ng-model="proje.yeri" type="text" placeholder="Yeri">
+            </label>
+        </div>
+        <div class="list" style="margin:10px;">
+            <button class="button button-small button-assertive" ng-click="sil()">
+                Projeyi Sil
+            </button>
+            <button class="button button-block button-positive" ng-click="kaydet()">
+                Düzenlemeyi Kaydet
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

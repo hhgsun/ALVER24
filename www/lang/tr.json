@@ -1,0 +1,12 @@
+﻿{
+  "id": "tr",
+  "langTitle": "Türkçe",
+  "AppName": "Verdi24",
+  "anasayfa": {
+    "title": "Anasayfa",
+    "subTitle": "Hoşgeldin"
+  },
+  "hesabim": {
+    "title": "Hesabım"
+  }
+}

@@ -1,0 +1,47 @@
+﻿<ion-view view-title="Referanslarım">
+    <ion-content style="background:#E8E8E8">
+        <div ng-repeat="proje in projeler" style="margin:10px; padding:10px; background:#fff;">
+            <div class="row">
+                <div class="col-80">
+                    {{proje.adi}}
+                    <br />
+                    {{proje.yeri}}
+                </div>
+                <div class="col-20">
+                    <a class="button button-small button-assertive" href="#/app/hesabim-referanslarimduzenle/{{proje.$id}}">
+                        Düzenle
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="item item-divider">
+            Yeni Proje Ekle:
+        </div>
+       
+        <div style="padding:10px;">
+            <a class="button button-small button-positive" ng-click="resimEkle()">Resim Ekle</a>
+            <a ng-show="silmeGoster" class="button button-small button-assertive" ng-click="resimleriSil()">Resimleri Temizle</a>
+            <br>
+            <div ng-repeat="url in eklenenResimler" style="width:30%; height:100px; overflow:hidden; float:left; margin:3px;">
+                <img src="{{url}}" style="width:100%;">
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+        <div class="list list-inset">
+            <form id="projeEkleForm">
+                <label class="item item-input">
+                    <input ng-model="proje.adi" type="text" placeholder="Proje Adı">
+                </label>
+                <label class="item item-input">
+                    <input ng-model="proje.yeri" type="text" placeholder="Proje Yeri">
+                </label>
+            </form>
+        </div>
+        <div class="list" style="margin:10px;">
+            <button class="button button-block button-assertive" ng-click="yeniProjeEkle(proje)">
+                Projeyi Ekle
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

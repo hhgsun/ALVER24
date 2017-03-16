@@ -1,0 +1,68 @@
+<ion-view view-title="Sepetim" hide-nav-bar="false" can-swipe-back="false">
+    <!--<div class="bar bar-subheader bar-stable">
+        <h2 class="title">
+            <span style="padding:5px 5px 7px 5px; background:#ef473a; border-radius:5px; color:#fff;">Siparişler</span>
+            <i class="icon ion-arrow-right-c"></i>
+            <span style="padding:5px 5px 7px 5px;">Bilgiler</span>
+            <i class="icon ion-arrow-right-c"></i>
+            <span style="padding:5px 5px 7px 5px;">Siparişi Onayla</span>
+        </h2>
+    </div>-->
+    <ion-content style="background:#E8E8E8;">
+        <!--<br /><br />-->
+        <ion-list>
+            <ion-item ng-repeat="urun in sepet" style="margin: 5px;">
+                <div class="row">
+                    <div class="col-60">
+                        <img ng-src="{{urun.imgUrl}}" width="70" style="float:left; margin-right:5px;" />
+                        <b>{{urun.adi}}</b> <span ng-if="urun.secilenSecenek != 'yok'"> * {{urun.secilenSecenek}} kg</span> <br />{{urun.aciklama}}<br />{{urun.birimFiyat}} &euro;
+                    </div>
+                    <div class="col-40">
+                        <button class="button-assertive button button-small" ng-click="sepettenKaldir(urun)" style="float:right; margin:-5px 0 10px 0">
+                            Sil
+                        </button>
+                        <div class="clearfix"></div>
+                        <input type="number" min="1" ng-model="urun.siparisAdeti" style="display:inline; border:1px solid #808080; float:right; width:50px; padding:0px 5px; margin:-2px 0 0 0;">
+                        <label class="button-small" style="float:right;">Adet:</label>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item style="margin:5px; padding-top:5px;">
+                <div class="row">
+                    <div class="col-80">
+                        <h2 style="text-align:right; font-weight:bold; color:#ff6a00">Puanlarını kullan indirim kazan</h2>
+                    </div>
+                    <div class="col-20" style="text-align:right;">
+                        <i class="icon ion-chevron-down icon-right"></i>
+                    </div>
+                </div>
+                <div>
+                    Puanınız :1200 Çek-Nr:123456789 (400 Puan)
+                </div>
+            </ion-item>
+
+            <ion-item class="item" style="margin:5px;">
+                Ürünler Toplamı (incl. MwSt.): <span style="float:right;">{{toplamFiyat}} &euro;</span>
+                <br />
+                Kargo Bedeli: <span style="float:right;">0,00 &euro;</span>
+                <br />
+                Puan Kullanım: <span style="float:right;">350,00 &euro;</span>
+                <br />
+                <button class="button button-outline button-small" ng-click="sepetiGuncelle(urun)">
+                    Sepeti Güncelle
+                </button>
+            </ion-item>
+            <ion-item class="item">
+                <button class="button button-block" style="background:#ff6a00; color:#fff;" ng-click="siparisiVer()" menu-close>
+                    Alışverişi Tamamlama
+                </button>
+            </ion-item>
+            <br />
+            <ion-item class="item item-icon-left" menu-close href="#/app/anasayfa">
+                <i class="icon ion-ios-arrow-back"></i>
+                Alışverişe Devam Et
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

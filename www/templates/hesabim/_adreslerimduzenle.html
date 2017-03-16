@@ -1,0 +1,52 @@
+﻿<ion-view view-title="Adres Düzenle">
+    <ion-content style="background:#E8E8E8">
+        <div class="list list-inset">
+            <label class="item item-input">
+                <input ng-model="adres.firmaAdi" type="text" placeholder="Firma Adı">
+            </label>
+            <label class="item item-input">
+                <input ng-model="adres.vstNr" type="text" placeholder="Vst.-Nr.">
+            </label>
+            <label class="item item-input">
+                <input ng-model="adres.title" type="text" placeholder="Title">
+            </label>
+            <label class="item item-input">
+                <input ng-model="adres.isim" type="text" placeholder="İsim">
+            </label>
+            <label class="item item-input">
+                <input ng-model="adres.soyisim" type="text" placeholder="Soyisim">
+            </label>
+            
+            <div style="background:#E8E8E8; padding:5px;">Adres Bilgilerim:</div>
+            <label class="item item-input">
+                <input ng-model="adres.adsoyad" type="text" placeholder="Ad Soyad">
+            </label>
+            <label class="item item-input">
+                <input type="text" ng-model="adres.co" placeholder="c/o">
+            </label>
+            <label class="item item-input">
+                <input ng-model="adres.caddeSokak" type="text" placeholder="Cadde/Sokak">
+            </label>
+            <label class="item item-input">
+                <input ng-model="adres.binaNr" type="text" placeholder="Bina Nr">
+            </label>
+            <label class="item item-input">
+                <input ng-model="adres.sehir" type="text" placeholder="Şehir">
+            </label>
+            <label class="item item-input">
+                <input ng-model="adres.postaKodu" type="text" placeholder="Posta Kodu">
+            </label>
+            <label class="item item-input">
+                <input ng-model="adres.ulke" type="text" placeholder="DEUTSCHLAND">
+            </label>
+        </div>
+        <div class="list" style="margin:10px;">
+            <button class="button button-small button-assertive" ng-click="sil()">
+                Adresi Sil
+            </button>
+            <button class="button button-block button-positive" ng-click="kaydet()">
+                Düzenlemeyi Kaydet
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

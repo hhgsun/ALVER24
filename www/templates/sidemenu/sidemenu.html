@@ -1,0 +1,74 @@
+<ion-side-menus enable-menu-with-back-views="true">
+
+    <a href="#/app/sepet" class="sepet-main-button">
+        <button class="button icon large ion-android-cart" ng-style="sepet.length>0 && {'background-color':'#10C143'} || {'background-color': '#FF8500'}"></button>
+        <div ng-if="sepet.length > 0" ng-style="sepet.length>0 && {'border-color':'#10C143'} || {'border-color': '#FF8500'}">
+            {{sepet.length}}
+        </div>
+    </a>
+
+
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-stable" style="text-align:center;">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon-round" menu-toggle="left"></button>
+            </ion-nav-buttons>
+
+            <ion-nav-buttons side="right">
+                <button class="button-outline button" ng-click="hesabimaGit()">
+                    <i class="icon ion-android-person"></i>
+                </button>
+            </ion-nav-buttons>
+
+        </ion-nav-bar>
+        <ion-nav-view name="viewContent"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left">
+        <!-- Side Menu Genel Template olmasına rağmen sepet olarak kullanılıyor, yukarıdaki viewContent template render kısmı-->
+        <ion-header-bar class="bar-dark">
+            <h1 class="title"><b>ALVER24</b>.com</h1>
+        </ion-header-bar>
+        <ion-content>
+            <ion-list>
+                <ion-item menu-toggle="left" href="#/app/anasayfa">
+                    <i class="icon ion-ios-home"></i> Anasayfa
+                </ion-item>
+                <!--ion-item menu-toggle="left" href="#/app/lavaslar">
+                    <i class="icon"><img src="img/lavasdurum.png" /></i>
+                    Lavaş / Tortilla
+                </ion-item>
+                <ion-item menu-toggle="left" href="#/app/gastromarket">
+                    <i class="icon ion-android-restaurant"></i>
+                    Gastro Market
+                </ion-item>
+                <ion-item menu-toggle="left" href="#/app/sebzehali">
+                    <i class="icon"><img src="https://cdn4.iconfinder.com/data/icons/veggie-vectors/1024/ColoredBeans_Tomato-512.png" width="14" height="16" /></i>
+                    Sebze Hali
+                </ion-item>
+                <ion-item menu-toggle="left" href="#/app/doner">
+                    <i class="icon"><img src="img/ionic4.png" /></i>
+                    Döner Çeşitleri
+                </ion-item-->
+                <ion-item menu-toggle="left" href="#/app/ilanbolumu">
+                    <i class="icon"><img src="img/ilanlar-icon.png" /></i> İlanlar
+                </ion-item>
+                <ion-item menu-toggle="left" href="#/app/prjdan">
+                    <i class="icon"><img src="img/projedanisman-icon.jpg" /></i> Proje Danışmanlığı
+                </ion-item>
+                <ion-item menu-toggle="left" href="#/app/isortakligi">
+                    <i class="icon"><img src="img/isortakligi.png" /></i> İş Ortağımız Olurmusun
+                </ion-item>
+                <ion-item menu-toggle="left" href="#/app/bizeyazin">
+                    <i class="icon ion-email"></i> Bize Yazın
+                </ion-item>
+                <ion-item menu-toggle="left" href="#/app/hakkimizda">
+                    <i class="icon ion-ios-help"></i> Impressum
+                </ion-item>
+            </ion-list>
+
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

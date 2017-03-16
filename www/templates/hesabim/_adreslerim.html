@@ -1,0 +1,75 @@
+﻿<ion-view view-title="Adreslerim">
+    <ion-content style="background:#E8E8E8">
+        <div ng-repeat="ad in adresler" style="margin:10px; padding:10px; background:#fff;">
+            <div class="row">
+                <div class="col-80">
+                    {{ad.firmaAdi}}
+                    <br />
+                    {{ad.caddeSokak}} {{ad.binaNr}}
+                    <br />
+                    {{ad.postaKodu}} {{ad.sehir}}
+                    <br />
+                    Teslim Alacak: {{ad.adsoyad}}
+                </div>
+                <div class="col-20">
+                    <a class="button button-small button-assertive" href="#/app/hesabim-adreslerimduzenle/{{ad.$id}}">
+                        Düzenle
+                    </a>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="item item-divider">
+            Yeni Adres Ekle:
+        </div>
+
+        <div class="list list-inset">
+            <form id="adresEkleForm">
+                <label class="item item-input">
+                    <input ng-model="adres.firmaAdi" type="text" placeholder="Firma Adı">
+                </label>
+                <label class="item item-input">
+                    <input ng-model="adres.vstNr" type="text" placeholder="Ust.-Nr.">
+                </label>
+                <label class="item item-input">
+                    <input ng-model="adres.title" type="text" placeholder="Title">
+                </label>
+
+                <div style="background:#E8E8E8; padding:5px;">Adres Bilgilerim:</div>
+                <label class="item item-input">
+                    <input ng-model="adres.adsoyad" type="text" placeholder="Ad Soyad">
+                </label>
+                <label class="item item-input">
+                    <input type="text" ng-model="adres.co" placeholder="c/o">
+                </label>
+                <label class="item item-input">
+                    <input ng-model="adres.caddeSokak" type="text" placeholder="Cadde/Sokak">
+                </label>
+                <label class="item item-input">
+                    <input ng-model="adres.binaNr" type="text" placeholder="Bina Nr">
+                </label>
+
+                <div class="row" style="padding:0;">
+                    <div class="col-40">
+                        <label class="item item-input">
+                            <input ng-model="adres.postaKodu" type="number" placeholder="Posta Kodu">
+                        </label>
+                    </div>
+                    <div class="col-60">
+                        <label class="item item-input">
+                            <input ng-model="adres.sehir" type="text" placeholder="Şehir">
+                        </label>
+                    </div>
+                </div>
+                <label class="item item-input">
+                    <input ng-model="adres.ulke" type="text" placeholder="DEUTSCHLAND">
+                </label>
+            </form>
+        </div>
+        <div class="list" style="margin:10px;">
+            <button class="button button-block button-assertive" ng-click="yeniAdresEkle(adres)">
+                Adresi Ekle
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

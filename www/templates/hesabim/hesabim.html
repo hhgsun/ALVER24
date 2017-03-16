@@ -1,0 +1,47 @@
+<ion-view view-title="Hesabım">
+    <ion-content style="background:#E8E8E8">
+
+        <div style="height:60px; text-align:center;">
+            <img src="img/ionic.png" style="width:60px; margin:15px; opacity:0.9;" />
+            <br />
+            <small style="color:#fff;">7 - 24 Alışveriş yapabileceğiniz nokta</small>
+        </div>
+        <br />
+        <div class="list padding">
+
+            <a class="item" href="#/app/hesabim_diller" style="margin-bottom:5px;">
+                Lisan<img src="img/bayrak-{{secilenDil}}.png" style="width:32px; vertical-align:text-bottom; margin:-6px; float:right;" />
+            </a>
+            <a class="item" href="#/app/hesabim_bilgilerim" style="margin-bottom:5px;">
+                Bilgilerim
+            </a>
+            <a class="item" href="#/app/hesabim_puanbilgileri" style="margin-bottom:5px;">
+                Çek ve Puanlarım
+            </a>
+            <a class="item" href="#/app/hesabim_siparislerim" style="margin-bottom:5px;">
+                Siparişlerim
+            </a>
+            <a class="item" href="#/app/hesabim_adreslerim" style="margin-bottom:5px;">
+                Adreslerim
+            </a>
+            <a class="item" href="#/app/hesabim_odemeayarlarim" style="margin-bottom:5px;">
+                Ödeme Ayarlarım
+            </a>
+            <a class="item" href="#/app/hesabim_referanslarim" style="margin-bottom:5px;">
+                Referans Projelerim <i class="icon ion-ios-compose-outline"></i> <!-- Eğer proje danışmanıysa gözükecek -->
+            </a>
+            <a class="item" href="#" style="margin-bottom:5px;">
+                Sözleşme
+            </a>
+            <br />
+
+            <div class="list list-inset">
+                <a ng-click="cikisYap()" class="item item-icon-left">
+                    <i class="icon ion-log-out"></i>
+                    Çıkış Yap
+                </a>
+            </div>
+            <br />
+        </div>
+    </ion-content>
+</ion-view>

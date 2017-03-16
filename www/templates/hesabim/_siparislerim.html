@@ -1,0 +1,30 @@
+﻿<ion-view view-title="Siparişlerim">
+    <ion-content style="background:#E8E8E8">
+        <div style="position:absolute; border:2px solid red; z-index:10;" ng-show="sepeteEklemeBasariliMsj != null" class="list card item-assertive">
+            <div style="padding:10px;">
+                <i class="icon ion-checkmark"></i> &nbsp; {{sepeteEklemeBasariliMsj}}
+            </div>
+        </div>
+
+        <div style="position:absolute; z-index:0; padding:10px; top:10px; margin:10px; background:#fff; text-align:center; width:90%;">
+            Daha önce hiç sipariş vermemişsiniz. <br />Keyifli alışverişler
+        </div>
+
+        <div ng-repeat="s in siparislerim" style="position:relative; z-index:1; padding:10px; margin:10px; background:#fff;">
+            <button class="button button-positive button-small" style="float:right;" ng-click="siparisiSepeteAt(s.urunler);">Sepete At</button>
+
+            <b>Sipariş Tarihi</b>
+            <br />
+            {{s.tarih}}
+            
+            <br />
+            <b>Ürünler</b>
+            <div ng-repeat="u in s.urunler">
+                > {{u.adi}}
+            </div>
+            <b>Durum</b>
+            <div>Teslim Edildi</div>
+        </div>
+        <br />
+    </ion-content>
+</ion-view>

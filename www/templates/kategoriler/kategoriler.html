@@ -1,0 +1,12 @@
+<ion-view view-title="{{katBaslik}} kategoriler">
+    <ion-content style="background: #E8E8E8;">
+
+        <div class="list anakategori-liste" style="background:#fff; margin:20px 11px 20px 11px; padding:0px 10px;">
+            <a ng-repeat="kategori in altKategoriler" href="#/app/urunlistele/{{kategori.key}}?baslik={{kategori.baslik}}" class="anakategori-btn"
+                ng-style="{'background': '' + kategori.renk + '', 'border-color':'' + kategori.renk + '', 'width':'95%'}">
+                <span>{{kategori.baslik}}</span>
+            </a>
+        </div>
+
+    </ion-content>
+</ion-view>

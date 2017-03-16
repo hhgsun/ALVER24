@@ -1,0 +1,12 @@
+﻿{
+  "id": "en",
+  "langTitle": "English",
+  "AppName": "Verdi24",
+  "anasayfa": {
+    "title": "Home",
+    "subTitle": "Welcome"
+  },
+  "hesabim": {
+    "title": "Account"
+  }
+}
